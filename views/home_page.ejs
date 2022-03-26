@@ -3,9 +3,9 @@
     <h1>Cv Builder</h1>
 </head>
 <body>
-    <div id="personal">
-        <h3>Personal Details</h3>
-        <form method="GET" action="/">
+    <form method="GET" action="/">
+        <div id="personal">
+            <h3>Personal Details</h3>
             <div>
                 <label for="first_name">First Name</label>
                 <input
@@ -58,7 +58,21 @@
                     required
                 />
             </div>
-            <button>Submit</button>
-        </form>
-    </div>
+        </div>
+        <div id="profile">
+            <h3>Professional Summary</h3>
+            <div>
+                <label for="summary">Profile</label>
+                <textarea
+                    id="summary"
+                    name="summary"
+                    rows="15"
+                    cols="45"
+                    tabindex="101"
+                    style="height: 171px"
+                ></textarea>
+            </div>
+        </div>
+        <button>Submit</button>
+    </form>
 </body>
