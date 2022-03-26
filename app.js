@@ -1,7 +1,7 @@
 const express = require("express");
 const mysql = require("mysql2");
 const bodyParser = require("body-parser");
-
+require("dotenv").config();
 // TODO set up the mysql connection
 const connection = mysql.createConnection({
     host: process.env.DB_HOST,
