@@ -3,6 +3,12 @@ const mysql = require("mysql2");
 const bodyParser = require("body-parser");
 
 // TODO set up the mysql connection
+const connection = mysql.createConnection({
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE,
+});
 const app = express();
 // TODO set up the environment
 app.set("view engine", "ejs");
