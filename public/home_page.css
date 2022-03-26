@@ -1,3 +1,6 @@
+#personal {
+    background-color: aliceblue;
+}
 input[type="text"]:focus {
     outline: none;
 }
