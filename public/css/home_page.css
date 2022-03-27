@@ -12,6 +12,7 @@ html {
 body {
     font-family: montserrat, arial, verdana;
 }
+
 .card {
     background-color: white;
     border: 1px solid #333;
@@ -92,12 +93,24 @@ body {
     }
 }
 
-input:focus {
-    outline: none;
+input,
+textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2c3e50;
+    font-size: 13px;
 }
 
+input:focus,
 textarea:focus {
+    border-color: #679b9b;
     outline: none;
+    color: #637373;
 }
 
 li {
