@@ -20,7 +20,13 @@ app.get("/", function (req, res) {
     res.render("home_page");
 });
 app.post("/register", function (req, res) {
-    res.render("final_cv");
+    const data = {
+        firstName: req.body.first_name,
+        lastName: req.body.last_name,
+        email: req.body.email,
+        summary: req.body.summary,
+    };
+    res.render("final_cv", data);
 });
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, function () {
