@@ -136,6 +136,12 @@ textarea:focus {
     color: #fff;
 }
 
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    counter-reset: step;
+}
+
 li {
     list-style-type: none;
     color: #679b9b;
