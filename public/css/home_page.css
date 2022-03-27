@@ -23,6 +23,7 @@
     font-weight: bold;
     font-size: 0.8em;
     color: #333;
+    cursor: pointer;
 }
 
 .form-group > input {
@@ -75,4 +76,12 @@
         opacity: 0;
         transform: scale(0);
     }
+}
+
+input:focus {
+    outline: none;
+}
+
+textarea:focus {
+    outline: none;
 }
