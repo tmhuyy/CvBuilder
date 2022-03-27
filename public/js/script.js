@@ -1,5 +1,8 @@
 const multiStepForm = document.querySelector("[data-multi-step]");
 const formSteps = [...multiStepForm.querySelectorAll("[data-step]")];
+const progress = document.getElementById("progress");
+const progressSteps = document.querySelectorAll(".progress-step");
+
 let currentStep = formSteps.findIndex((step) => {
     return step.classList.contains("active");
 });
@@ -24,6 +27,7 @@ multiStepForm.addEventListener("click", (e) => {
     if (allValid) {
         currentStep += incrementor;
         showCurrentStep();
+        updateProgressbar();
     }
 });
 
@@ -41,4 +45,19 @@ function showCurrentStep() {
     formSteps.forEach((step, index) => {
         step.classList.toggle("active", index === currentStep);
     });
+}
+
+function updateProgressbar() {
+    progressSteps.forEach((progressStep, idx) => {
+        if (idx < currentStep + 1) {
+            progressStep.classList.add("progress-step-active");
+        } else {
+            progressStep.classList.remove("progress-step-active");
+        }
+    });
+
+    const progressActive = document.querySelectorAll(".progress-step-active");
+
+    progress.style.width =
+        ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + "%";
 }
