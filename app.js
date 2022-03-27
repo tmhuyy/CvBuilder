@@ -19,6 +19,7 @@ app.use(express.static(__dirname + "/public"));
 app.get("/", function (req, res) {
     res.render("home_page");
 });
-app.listen(3000, function () {
-    console.log("On port 3000");
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, function () {
+    console.log("On port ");
 });
