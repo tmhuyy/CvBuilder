@@ -6,7 +6,7 @@
 }
 html {
     height: 100%;
-    background: #ffeadb;
+    background: #f7f5f2;
 }
 
 body {
@@ -52,6 +52,8 @@ body {
     margin: 0;
     margin-bottom: 1rem;
     text-align: center;
+    text-transform: uppercase;
+    color: #2c3e50;
 }
 
 .card.active {
