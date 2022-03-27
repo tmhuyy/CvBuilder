@@ -61,6 +61,9 @@ body {
 .multi-step-form {
     overflow: hidden;
     position: relative;
+    width: 400px;
+    margin: 50px auto;
+    text-align: center;
 }
 
 .hide {
@@ -111,6 +114,24 @@ textarea:focus {
     border-color: #679b9b;
     outline: none;
     color: #637373;
+}
+
+.action-button {
+    width: 100px;
+    background: #ff9a76;
+    font-weight: bold;
+    color: #fff;
+    transition: 150ms;
+    border: 0 none;
+    border-radius: 1px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+.action-button:hover,
+.action-button:focus {
+    box-shadow: 0 0 0 2px #f08a5d;
+    color: #fff;
 }
 
 li {
