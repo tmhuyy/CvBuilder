@@ -19,6 +19,9 @@ app.use(express.static(__dirname + "/public"));
 app.get("/", function (req, res) {
     res.render("home_page");
 });
+app.post("/register", function (req, res) {
+    res.render("final_cv");
+});
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, function () {
     console.log("On port ");
