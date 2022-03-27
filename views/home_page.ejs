@@ -4,11 +4,18 @@
 </head>
 <body>
     <form data-multi-step class="multi-step-form" method="GET" action="/">
-        <ul id="progressbar">
-            <li class="active">Personal Details</li>
-            <li>Professional Summary</li>
-            <li>Social Profiles</li>
-        </ul>
+        <h2>Progess</h2>
+        <div class="progressbar">
+            <div class="progress" id="progress"></div>
+            <div
+                class="progress-step progress-step-active"
+                data-title="Intro"
+            ></div>
+            <div class="progress-step" data-title="Profile"></div>
+            <div class="progress-step" data-title="Education"></div>
+            <div class="progress-step" data-title="Project"></div>
+            <div class="progress-step" data-title="Skill"></div>
+        </div>
 
         <fieldset class="card" data-step>
             <h3 class="step-title">Personal Details</h3>
@@ -67,9 +74,8 @@
             <button type="button" data-next class="action-button">Next</button>
         </fieldset>
         <fieldset class="card" data-step>
-            <h3 class="step-title">Professional Summary</h3>
+            <h3 class="step-title">Career Objective</h3>
             <div class="form-group">
-                <label for="summary">Profile</label>
                 <textarea
                     id="summary"
                     name="summary"
