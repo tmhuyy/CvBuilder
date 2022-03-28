@@ -1,4 +1,12 @@
+<!-- flatpickr package  -->
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
 <link rel="stylesheet" href="/css/home_page.css" />
+
 <head>
     <h1>Cv Builder</h1>
 </head>
@@ -134,7 +142,7 @@
                 <label for="start_end_date">Start & End Date</label>
                 <div class="date">
                     <input
-                        type="month"
+                        type="datetime-local"
                         name="start"
                         id="start_end_date"
                         placeholder=""
@@ -142,7 +150,7 @@
                         required
                     />
                     <input
-                        type="month"
+                        type="datetime-local"
                         name="end"
                         id="start_end_date"
                         placeholder=""
