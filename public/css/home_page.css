@@ -198,6 +198,12 @@ textarea:focus {
     color: #f3f3f3;
 }
 
-input[type="date" i] {
+input[type="month" i] {
     cursor: pointer;
+    padding: 0.25rem;
+    margin-left: 0.5rem;
+}
+
+.date {
+    display: flex;
 }
