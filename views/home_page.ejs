@@ -235,7 +235,34 @@
             </button>
             <button type="button" data-next class="action-button">Next</button>
         </fieldset>
-        <button type="submit" class="action-button">Submit</button>
+        <fieldset class="card" data-step>
+            <h3 class="step-title">Websites & Social Links</h3>
+            <div class="form-group">
+                <label for="label">Label</label>
+                <input
+                    type="text"
+                    name="link_label"
+                    id="label"
+                    placeholder=""
+                    required
+                />
+            </div>
+            <div class="form-group">
+                <label for="link">Link</label>
+                <input
+                    type="url"
+                    name="link"
+                    id="link"
+                    pattern="https://.*"
+                    size="30"
+                    required
+                />
+            </div>
+            <button type="button" data-previous class="action-button">
+                Previous
+            </button>
+            <button type="submit" class="action-button">Submit</button>
+        </fieldset>
     </form>
 </body>
 <script src="/js/script.js"></script>
