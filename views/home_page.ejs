@@ -3,6 +3,12 @@
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
 />
+<link
+    rel="stylesheet"
+    type="text/css"
+    href="https://npmcdn.com/flatpickr/dist/themes/dark.css"
+/>
+
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
 <link rel="stylesheet" href="/css/home_page.css" />
@@ -142,19 +148,17 @@
                 <label for="start_end_date">Start & End Date</label>
                 <div class="date">
                     <input
-                        type="datetime-local"
+                        type="text"
                         name="start"
                         id="start_end_date"
-                        placeholder=""
-                        placeholder="MM/YYYY"
+                        placeholder="YYYY-MM"
                         required
                     />
                     <input
-                        type="datetime-local"
+                        type="text"
                         name="end"
                         id="start_end_date"
-                        placeholder=""
-                        value="2022-12"
+                        placeholder="YYYY-MM"
                         required
                     />
                 </div>
@@ -168,6 +172,4 @@
     </form>
 </body>
 <script src="/js/script.js"></script>
-<script>
-    flatpickr("input[type=datetime-local]", {});
-</script>
+<script src="/js/datetime_local.js"></script>
