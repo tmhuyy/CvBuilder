@@ -35,6 +35,7 @@ body {
     flex-direction: column;
     margin-bottom: 0.5rem;
     gap: 0.25em;
+    position: relative;
 }
 
 .form-group:last-child {
@@ -68,6 +69,7 @@ textarea {
     font-family: montserrat;
     color: #2c3e50;
     font-size: 13px;
+    display: block;
 }
 
 input:focus,
@@ -77,41 +79,10 @@ textarea:focus {
     color: #637373;
 }
 
-.form-group.success input {
-    border-color: #2ecc71;
-}
-
-.form-group.error input {
-    border-color: #e74c3c;
-}
-
 .form-group i {
-    visibility: hidden;
     position: absolute;
-    bottom: 27rem;
-    right: 1rem;
-}
-
-.form-group.success i.fa-check-circle {
-    color: #2ecc71;
-    visibility: visible;
-}
-
-.form-group.error i.fa-exclamation-circle {
-    color: #e74c3c;
-    visibility: visible;
-}
-
-.form-group small {
-    color: #e74c3c;
-    position: absolute;
-    top: 7.5rem;
-    left: 1rem;
-    visibility: hidden;
-}
-
-.form-group.error small {
-    visibility: visible;
+    top: 40px;
+    right: 10px;
 }
 
 .step-title {
