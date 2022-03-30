@@ -16,10 +16,14 @@ form.addEventListener("click", function (e) {
 
 const checkValidator = function () {
     const firstNameValue = firstName.value.trim();
-    const lastNameValue = firstName.value.trim();
+    const lastNameValue = lastName.value.trim();
     const addressValue = address.value.trim();
+    const phoneNumberValue = phoneNumber.value.trim();
     const emailValue = email.value.trim();
     checkEmpty(firstNameValue, firstName, "Cannot be blank");
+    checkEmpty(lastNameValue, lastName, "Cannot be blank");
+    checkEmpty(addressValue, address, "Cannot be blank");
+    checkEmpty(phoneNumberValue, phoneNumber, "Cannot be blank");
 };
 
 const checkEmpty = function (value, inputValue, message) {
