@@ -15,9 +15,14 @@ const summary = document.querySelector("#summary");
 // TODO check email
 const email = document.querySelector("#email");
 
-buttonField1.addEventListener("click", function (e) {
-    console.log("hello");
+buttonField1.addEventListener("click", (e) => {
+    e.preventDefault();
     checkValidator1();
+});
+
+buttonField2.addEventListener("click", (e) => {
+    e.preventDefault();
+    checkValidator2();
 });
 
 const blank = "Cannot be blank";
@@ -34,6 +39,11 @@ const checkValidator1 = function () {
     checkEmpty(addressValue, address, blank);
     checkEmpty(phoneNumberValue, phoneNumber, blank);
     checkEmail(emailValue, email, blank, invalid);
+};
+
+const checkValidator2 = function () {
+    const summaryValue = summary.value.trim();
+    checkEmpty(summaryValue, summary, blank);
 };
 
 const checkEmpty = function (value, inputValue, message) {
