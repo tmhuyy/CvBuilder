@@ -4,6 +4,7 @@ const form = document.querySelector("#form");
 const firstName = document.querySelector("#first_name");
 const lastName = document.querySelector("#last_name");
 const address = document.querySelector("#address");
+const phoneNumber = document.querySelector("#phone_number");
 
 // TODO check email
 const email = document.querySelector("#email");
