@@ -242,3 +242,9 @@ textarea:focus {
 input[type="datetime-local" i] {
     cursor: pointer;
 }
+
+textarea {
+    resize: none;
+    height: 59px;
+    font-size: 16px;
+}
