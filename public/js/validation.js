@@ -34,7 +34,20 @@ const checkEmpty = function (value, inputValue, message) {
     }
 };
 
-const checkEmail = function (value) {};
+const checkEmail = function (value, inputValue, message1, message2) {
+    if (value === "") {
+        setError(inputValue, "Cannot be blank");
+    } else if (!isEmail(value)) {
+        setError(inputValue, "Not a valid email");
+    } else {
+        setSuccess(inputValue);
+    }
+};
+
+const isEmail = function (email) {
+    const condition = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    return condition.test(email);
+};
 
 const setError = function (input, message) {
     const formGroup = input.parentElement; // .form-group
