@@ -21,3 +21,5 @@ const checkValidator = function () {
 };
 
 const checkEmpty = function (value) {};
+
+const checkEmail = function (value) {};
