@@ -23,3 +23,10 @@ const checkValidator = function () {
 const checkEmpty = function (value) {};
 
 const checkEmail = function (value) {};
+
+const setError = function (input, message) {
+    const formGroup = input.parentElement; // .form-group
+    const small = formGroup.querySelector("small");
+    formGroup.className = "form-group error";
+    small.innerText = message;
+};
