@@ -94,6 +94,16 @@ textarea:focus {
     visibility: hidden;
 }
 
+.form-group.success i.fa-check-circle {
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.form-group.error i.fa-exclamation-circle {
+    color: #e74c3c;
+    visibility: visible;
+}
+
 .form-group small {
     color: #e74c3c;
     position: absolute;
