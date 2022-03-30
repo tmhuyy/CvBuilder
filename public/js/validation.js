@@ -25,6 +25,7 @@ const checkEmpty = function (value, message) {
     if (value === "") {
         setError(value, message);
     } else {
+        setSuccess(value);
     }
 };
 
