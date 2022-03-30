@@ -24,6 +24,7 @@ const checkValidator = function () {
     checkEmpty(lastNameValue, lastName, "Cannot be blank");
     checkEmpty(addressValue, address, "Cannot be blank");
     checkEmpty(phoneNumberValue, phoneNumber, "Cannot be blank");
+    checkEmail(emailValue, email, "Cannot be blank", "Not a valid email");
 };
 
 const checkEmpty = function (value, inputValue, message) {
@@ -36,9 +37,9 @@ const checkEmpty = function (value, inputValue, message) {
 
 const checkEmail = function (value, inputValue, message1, message2) {
     if (value === "") {
-        setError(inputValue, "Cannot be blank");
+        setError(inputValue, message1);
     } else if (!isEmail(value)) {
-        setError(inputValue, "Not a valid email");
+        setError(inputValue, message2);
     } else {
         setSuccess(inputValue);
     }
