@@ -13,8 +13,8 @@
 .social-panel {
     background-color: #fff;
     border-radius: 16px;
-    box-shadow: 0 16px 31px -17px rgba(0, 31, 97, 0.6);
-    border: 5px solid #001f61;
+    box-shadow: 0 16px 31px -17px rgba(152, 171, 213, 0.6);
+    border: 2px solid #847e78;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,22 +28,24 @@
 
 .social-panel button.close-btn {
     border: 0;
-    color: #97a5ce;
     cursor: pointer;
     font-size: 20px;
     position: absolute;
     top: 5px;
-    right: 5px;
+    right: 10px;
 }
-
+.close-btn {
+    background-color: white;
+}
 .social-panel button.close-btn:focus {
     outline: none;
 }
 
 .social-panel p {
-    background-color: #001f61;
+    background-color: #847e78;
     border-radius: 0 0 10px 10px;
-    color: #fff;
+    color: white;
+    font-weight: bold;
     font-size: 14px;
     line-height: 18px;
     padding: 2px 17px 6px;
@@ -67,7 +69,7 @@
 
 .social-panel h4 {
     margin: 20px 0;
-    color: #97a5ce;
+    color: #2c3246;
     font-family: "Muli";
     font-size: 14px;
     line-height: 18px;
@@ -86,7 +88,7 @@
 }
 
 .social-panel ul li a {
-    border: 1px solid #dce1f2;
+    border: 1px solid #847e78;
     border-radius: 50%;
     color: #001f61;
     font-size: 20px;
@@ -99,17 +101,18 @@
 }
 
 .social-panel ul li a:hover {
-    border-color: #ff6a00;
-    box-shadow: 0 9px 12px -9px #ff6a00;
+    border-color: #c3e5ae;
+    box-shadow: 5px 5px 10px -2px #c3e5ae;
 }
 
 .floating-btn {
     border-radius: 26.5px;
-    background-color: #001f61;
+    background-color: #f3e9dd;
     border: 1px solid #001f61;
     box-shadow: 0 16px 22px -17px #03153b;
     color: #fff;
     cursor: pointer;
+    color: black;
     font-size: 16px;
     line-height: 20px;
     padding: 12px 20px;
@@ -120,8 +123,8 @@
 }
 
 .floating-btn:hover {
-    background-color: #ffffff;
-    color: #001f61;
+    background-color: #847e78;
+    color: white;
 }
 
 .floating-btn:focus {
