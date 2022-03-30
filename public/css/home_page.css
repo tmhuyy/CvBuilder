@@ -134,6 +134,7 @@ textarea:focus {
     position: relative;
     width: 400px;
     margin: 50px auto;
+    margin-top: 0px;
     text-align: center;
 }
 
@@ -247,4 +248,8 @@ textarea {
     resize: none;
     height: 59px;
     font-size: 16px;
+}
+
+textarea::-webkit-scrollbar {
+    width: 0px;
 }
