@@ -62,5 +62,5 @@ const setError = function (input, message) {
 
 const setSuccess = function (input) {
     const formGroup = input.parentElement; // .form-group
-    formGroup.className = "form-control success";
+    formGroup.className = "form-group success";
 };
