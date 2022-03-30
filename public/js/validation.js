@@ -36,3 +36,8 @@ const setError = function (input, message) {
     formGroup.className = "form-group error";
     small.innerText = message;
 };
+
+const setSuccess = function (input) {
+    const formGroup = input.parentElement; // .form-group
+    formGroup.className = "form-control success";
+};
