@@ -1,23 +1,29 @@
-const form = document.querySelector("#form");
+const buttonField1 = document.querySelector("#next-1");
+const buttonField2 = document.querySelector("#next-2");
+const buttonField3 = document.querySelector("#next-3");
+const buttonField4 = document.querySelector("#next-4");
+const buttonField5 = document.querySelector("#next-5");
+const buttonField6 = document.querySelector("#next-6");
 
 // TODO check empty
 const firstName = document.querySelector("#first_name");
 const lastName = document.querySelector("#last_name");
 const address = document.querySelector("#address");
 const phoneNumber = document.querySelector("#phone_number");
+const summary = document.querySelector("#summary");
 
 // TODO check email
 const email = document.querySelector("#email");
 
-form.addEventListener("click", function (e) {
+buttonField1.addEventListener("click", function (e) {
     console.log("hello");
-    checkValidator();
+    checkValidator1();
 });
 
 const blank = "Cannot be blank";
 const invalid = "Invalid email";
 
-const checkValidator = function () {
+const checkValidator1 = function () {
     const firstNameValue = firstName.value.trim();
     const lastNameValue = lastName.value.trim();
     const addressValue = address.value.trim();
