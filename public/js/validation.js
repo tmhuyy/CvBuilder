@@ -19,6 +19,7 @@ const checkValidator = function () {
     const lastNameValue = firstName.value.trim();
     const addressValue = address.value.trim();
     const emailValue = email.value.trim();
+    checkEmpty(firstNameValue, firstName, "Cannot be blank");
 };
 
 const checkEmpty = function (value, inputValue, message) {
