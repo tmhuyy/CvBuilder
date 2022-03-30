@@ -112,6 +112,10 @@ textarea:focus {
     visibility: hidden;
 }
 
+.form-group.error small {
+    visibility: visible;
+}
+
 .step-title {
     margin: 0;
     margin-bottom: 1rem;
