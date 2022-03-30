@@ -23,11 +23,11 @@ const checkValidator = function () {
     const addressValue = address.value.trim();
     const phoneNumberValue = phoneNumber.value.trim();
     const emailValue = email.value.trim();
-    checkEmpty(firstNameValue, firstName, "Cannot be blank");
-    checkEmpty(lastNameValue, lastName, "Cannot be blank");
-    checkEmpty(addressValue, address, "Cannot be blank");
-    checkEmpty(phoneNumberValue, phoneNumber, "Cannot be blank");
-    checkEmail(emailValue, email, "Cannot be blank", "Not a valid email");
+    checkEmpty(firstNameValue, firstName, blank);
+    checkEmpty(lastNameValue, lastName, blank);
+    checkEmpty(addressValue, address, blank);
+    checkEmpty(phoneNumberValue, phoneNumber, blank);
+    checkEmail(emailValue, email, blank, invalid);
 };
 
 const checkEmpty = function (value, inputValue, message) {
