@@ -19,3 +19,5 @@ const checkValidator = function () {
     const addressValue = address.value.trim();
     const emailValue = email.value.trim();
 };
+
+const checkEmpty = function (value) {};
