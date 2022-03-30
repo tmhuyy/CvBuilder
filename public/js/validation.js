@@ -21,7 +21,12 @@ const checkValidator = function () {
     const emailValue = email.value.trim();
 };
 
-const checkEmpty = function (value) {};
+const checkEmpty = function (value, message) {
+    if (value === "") {
+        setError(value, message);
+    } else {
+    }
+};
 
 const checkEmail = function (value) {};
 
