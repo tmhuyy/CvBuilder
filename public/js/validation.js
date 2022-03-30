@@ -14,6 +14,9 @@ form.addEventListener("click", function (e) {
     checkValidator();
 });
 
+const blank = "Cannot be blank";
+const invalid = "Invalid email";
+
 const checkValidator = function () {
     const firstNameValue = firstName.value.trim();
     const lastNameValue = lastName.value.trim();
