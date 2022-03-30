@@ -50,19 +50,12 @@ body {
     display: inline-block;
 }
 
-.form-group > input {
-    border: 2px solid #f0f0f0;
-    border-radius: 4px;
-    font-size: 1rem;
-    padding: 0.75em;
-}
-
 input,
 textarea {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
     background-color: rgb(239, 242, 249);
     padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
     margin-bottom: 20px;
     width: 100%;
     box-sizing: border-box;
@@ -80,6 +73,10 @@ textarea:focus {
 }
 
 .form-group.success input {
+    border-color: #2ecc71;
+}
+
+.form-group.success textarea {
     border-color: #2ecc71;
 }
 
