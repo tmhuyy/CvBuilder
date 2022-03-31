@@ -6,9 +6,11 @@
     width: 294px;
     margin: 15px auto;
 }
-.controls a {
+.controls button {
     margin: 1rem;
-    text-decoration: none;
     color: #2c3e50;
     font-size: 0.8rem;
+    padding: 10px;
+    font-family: inherit;
+    font-weight: 700;
 }

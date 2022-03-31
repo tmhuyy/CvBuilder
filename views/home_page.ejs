@@ -20,6 +20,7 @@
 <link rel="stylesheet" href="/css/home_page.css" />
 <link rel="stylesheet" href="/css/contact.css" />
 <link rel="stylesheet" href="/css/accordion.css" />
+<link rel="stylesheet" href="/css/dynamicForm.css" />
 <head>
     <h1>Cv Builder</h1>
 </head>
@@ -45,7 +46,7 @@
             <div class="progress-step" data-title="Link"></div>
         </div>
         <!-- form input -->
-        <fieldset class="card" data-step>
+        <!-- <fieldset class="card" data-step>
             <h3 class="step-title">Personal Details</h3>
             <div class="form-group">
                 <label for="first_name">First Name</label>
@@ -280,7 +281,7 @@
             <button id="next-5" type="button" data-next class="action-button">
                 Next
             </button>
-        </fieldset>
+        </fieldset> -->
         <fieldset class="card" data-step>
             <h3 class="step-title">Websites & Social Links</h3>
             <button type="button" class="accordion">Section 1</button>
@@ -313,7 +314,14 @@
                     <small>Error message</small>
                 </div>
             </div>
-
+            <div class="controls">
+                <button type="button" id="add_more_fields">
+                    <i class="fa fa-plus"></i> Add More
+                </button>
+                <button type="button" id="remove_fields">
+                    <i class="fa fa-plus"></i> Remove Field
+                </button>
+            </div>
             <button type="button" data-previous class="action-button">
                 Previous
             </button>
@@ -350,3 +358,4 @@
 <script src="/js/auto_resize.js"></script>
 <script src="/js/contact.js"></script>
 <script src="/js/accordion.js"></script>
+<script src="/js/dynamicForm.js"></script>
