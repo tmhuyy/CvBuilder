@@ -284,41 +284,73 @@
         </fieldset> -->
         <fieldset class="card" data-step>
             <h3 class="step-title">Websites & Social Links</h3>
-            <button type="button" class="accordion">Section 1</button>
-            <div class="panel">
-                <div class="form-group">
-                    <label for="label">Label</label>
-                    <input
-                        type="text"
-                        name="link_label"
-                        id="label"
-                        placeholder=""
-                        required
-                    />
-                    <i class="fas fa-check-circle"></i>
-                    <i class="fas fa-exclamation-circle"></i>
-                    <small>Error message</small>
+            <div id="more-form">
+                <button type="button" class="accordion">Section 1</button>
+                <div class="panel">
+                    <div class="form-group">
+                        <label for="label">Label</label>
+                        <input
+                            type="text"
+                            name="link_label"
+                            id="label"
+                            placeholder=""
+                            required
+                        />
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="link">Link</label>
+                        <input
+                            type="url"
+                            name="link"
+                            id="link"
+                            pattern="https://.*"
+                            size="30"
+                            required
+                        />
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="link">Link</label>
-                    <input
-                        type="url"
-                        name="link"
-                        id="link"
-                        pattern="https://.*"
-                        size="30"
-                        required
-                    />
-                    <i class="fas fa-check-circle"></i>
-                    <i class="fas fa-exclamation-circle"></i>
-                    <small>Error message</small>
+                <button type="button" class="accordion">Section 1</button>
+                <div class="panel">
+                    <div class="form-group">
+                        <label for="label">Label</label>
+                        <input
+                            type="text"
+                            name="link_label"
+                            id="label"
+                            placeholder=""
+                            required
+                        />
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="link">Link</label>
+                        <input
+                            type="url"
+                            name="link"
+                            id="link"
+                            pattern="https://.*"
+                            size="30"
+                            required
+                        />
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
                 </div>
             </div>
             <div class="controls">
-                <button type="button" id="add_more_fields">
+                <button type="button" id="add">
                     <i class="fa fa-plus"></i> Add More
                 </button>
-                <button type="button" id="remove_fields">
+                <button type="button" id="remove">
                     <i class="fa fa-plus"></i> Remove Field
                 </button>
             </div>
@@ -357,5 +389,5 @@
 <script src="/js/validation.js"></script>
 <script src="/js/auto_resize.js"></script>
 <script src="/js/contact.js"></script>
-<script src="/js/accordion.js"></script>
 <script src="/js/dynamicForm.js"></script>
+<script src="/js/accordion.js"></script>

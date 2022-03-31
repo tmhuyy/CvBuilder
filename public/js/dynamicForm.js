@@ -1,6 +1,6 @@
 const fieldSet = document.querySelector(".card");
-const addField = document.querySelector("#add_more_fields");
-const removeField = document.querySelector("#remove_fields");
+const addField = document.querySelector("#add");
+const removeField = document.querySelector("#remove");
 
 addField.addEventListener("click", () => {
     console.log("add");

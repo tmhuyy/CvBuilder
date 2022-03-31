@@ -35,3 +35,7 @@
 .change:after {
     content: "\25B2";
 }
+
+.panel {
+    margin-bottom: 10px;
+}
