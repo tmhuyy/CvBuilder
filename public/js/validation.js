@@ -46,13 +46,8 @@ const checkValidator2 = function () {
     checkEmpty(summaryValue, summary, blank);
 };
 
-const checkEmpty = function (value, inputValue, message) {
-    if (value === "") {
-        setError(inputValue, message);
-    } else {
-        setSuccess(inputValue);
-    }
-};
+const checkEmpty = (value, inputValue, message) =>
+    value === "" ? setError(inputValue, message) : setSuccess(inputValue);
 
 const checkEmail = function (value, inputValue, message1, message2) {
     if (value === "") {
