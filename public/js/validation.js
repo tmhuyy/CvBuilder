@@ -22,6 +22,9 @@ const startDate = document.querySelectorAll("#start_end_date_school")[0];
 const endDate = document.querySelectorAll("#start_end_date_school")[1];
 // Skill
 const descriptionSkill = document.querySelector("#description_skill");
+// Link
+const link = document.querySelector("#link");
+const label = document.querySelector("#label");
 
 buttonField1.addEventListener("click", (e) => {
     e.preventDefault();
@@ -43,8 +46,12 @@ buttonField4.addEventListener("click", (e) => {
     checkValidator4();
 });
 
+buttonField6.addEventListener("click", (e) => {
+    e.preventDefault();
+    checkValidator6();
+});
+
 const blank = "Cannot be blank";
-const invalid = "Invalid email";
 
 const checkValidator1 = function () {
     const firstNameValue = trimValue(firstName);
@@ -56,7 +63,7 @@ const checkValidator1 = function () {
     checkEmpty(lastNameValue, lastName, blank);
     checkEmpty(addressValue, address, blank);
     checkEmpty(phoneNumberValue, phoneNumber, blank);
-    checkEmail(emailValue, email, blank, invalid);
+    checkEmail(emailValue, email, blank, "Invalid email");
 };
 
 const checkValidator2 = function () {
@@ -82,22 +89,31 @@ const checkValidator4 = function () {
     checkEmpty(descriptionSkillValue, descriptionSkill, blank);
 };
 
+const checkValidator6 = function () {
+    const linkValue = trimValue(link);
+    const labelValue = trimValue(label);
+    checkEmpty(labelValue, label, blank);
+    checkURL(linkValue, link, blank, "Invalid URL");
+};
+
 const checkEmpty = (value, inputValue, message) =>
     value === "" ? setError(inputValue, message) : setSuccess(inputValue);
 
-const checkEmail = function (value, inputValue, message1, message2) {
-    if (value === "") {
-        setError(inputValue, message1);
-    } else if (!isEmail(value)) {
-        setError(inputValue, message2);
-    } else {
-        setSuccess(inputValue);
-    }
-};
+const checkEmail = (value, inputValue, message1, message2) =>
+    specialCondition(isEmail, value, inputValue, message1, message2);
+
+const checkURL = (value, inputValue, message1, message2) =>
+    specialCondition(isURL, value, inputValue, message1, message2);
 
 const isEmail = function (email) {
     const condition = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     return condition.test(email);
+};
+
+const isURL = function (url) {
+    const condition =
+        /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/;
+    return condition.test(url);
 };
 
 const setError = function (input, message) {
@@ -113,3 +129,19 @@ const setSuccess = function (input) {
 };
 
 const trimValue = (e) => e.value.trim();
+
+const specialCondition = function (
+    type,
+    value,
+    inputValue,
+    message1,
+    message2
+) {
+    if (value === "") {
+        setError(inputValue, message1);
+    } else if (!type(value)) {
+        setError(inputValue, message2);
+    } else {
+        setSuccess(inputValue);
+    }
+};
