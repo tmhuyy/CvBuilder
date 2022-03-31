@@ -1,0 +1,11 @@
+.controls {
+    width: 294px;
+    margin: 15px auto;
+}
+
+#remove_fields {
+    float: right;
+}
+.controls a i.fa-minus {
+    margin-right: 5px;
+}
