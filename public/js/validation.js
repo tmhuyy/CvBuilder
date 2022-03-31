@@ -11,6 +11,7 @@ const firstName = document.querySelector("#first_name");
 const lastName = document.querySelector("#last_name");
 const address = document.querySelector("#address");
 const phoneNumber = document.querySelector("#phone_number");
+const email = document.querySelector("#email");
 // Career Objective
 const summary = document.querySelector("#summary");
 // Education
@@ -21,7 +22,6 @@ const startDate = document.querySelectorAll("#start_end_date_school")[0];
 const endDate = document.querySelectorAll("#start_end_date_school")[0];
 
 // TODO check email
-const email = document.querySelector("#email");
 
 buttonField1.addEventListener("click", (e) => {
     e.preventDefault();
