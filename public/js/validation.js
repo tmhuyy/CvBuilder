@@ -65,6 +65,11 @@ const checkValidator3 = function () {
     const descriptionSchoolValue = trimValue(descriptionSchool);
     const startDateValue = trimValue(startDate);
     const endDateValue = trimValue(endDate);
+    checkEmpty(schoolNameValue, schoolName, blank);
+    checkEmpty(degreeValue, degree, blank);
+    checkEmpty(descriptionSchoolValue, descriptionSchool, blank);
+    checkEmpty(startDateValue, startDate);
+    checkEmpty(endDateValue, endDate, blank);
 };
 
 const checkEmpty = (value, inputValue, message) =>
