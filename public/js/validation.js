@@ -97,3 +97,5 @@ const setSuccess = function (input) {
     const formGroup = input.parentElement; // .form-group
     formGroup.className = "form-group success";
 };
+
+const trimValue = (e) => e.value.trim();
