@@ -30,5 +30,5 @@ app.post("/register", function (req, res) {
 });
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, function () {
-    console.log("On port ");
+    console.log(`http://localhost:${PORT}/`);
 });
