@@ -60,11 +60,11 @@ const checkValidator2 = function () {
 };
 
 const checkValidator3 = function () {
-    const schoolNameValue = schoolName.value.trim();
-    const degreeValue = degree.value.trim();
-    const descriptionSchoolValue = descriptionSchool.value.trim();
-    const startDateValue = startDate.value.trim();
-    const endDateValue = endDate.value.trim();
+    const schoolNameValue = trimValue(schoolName);
+    const degreeValue = trimValue(degree);
+    const descriptionSchoolValue = trimValue(descriptionSchool);
+    const startDateValue = trimValue(startDate);
+    const endDateValue = trimValue(endDate);
 };
 
 const checkEmpty = (value, inputValue, message) =>
