@@ -25,6 +25,11 @@ buttonField2.addEventListener("click", (e) => {
     checkValidator2();
 });
 
+buttonField3.addEventListener("click", (e) => {
+    e.preventDefault();
+    checkValidator3();
+});
+
 const blank = "Cannot be blank";
 const invalid = "Invalid email";
 
