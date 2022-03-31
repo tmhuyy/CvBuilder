@@ -6,11 +6,19 @@ const buttonField5 = document.querySelector("#next-5");
 const buttonField6 = document.querySelector("#next-6");
 
 // TODO check empty
+// Personal details
 const firstName = document.querySelector("#first_name");
 const lastName = document.querySelector("#last_name");
 const address = document.querySelector("#address");
 const phoneNumber = document.querySelector("#phone_number");
+// Career Objective
 const summary = document.querySelector("#summary");
+// Education
+const schoolName = document.querySelector("#school_name");
+const degree = document.querySelector("#degree");
+const descriptionSchool = document.querySelector("#description_school");
+const startDate = document.querySelectorAll("#start_end_date_school")[0];
+const endDate = document.querySelectorAll("#start_end_date_school")[0];
 
 // TODO check email
 const email = document.querySelector("#email");
@@ -48,6 +56,15 @@ const checkValidator1 = function () {
 
 const checkValidator2 = function () {
     const summaryValue = summary.value.trim();
+    checkEmpty(summaryValue, summary, blank);
+};
+
+const checkValidator3 = function () {
+    const schoolNameValue = schoolName.value.trim();
+    const degreeValue = degree.value.trim();
+    const descriptionSchoolValue = descriptionSchool.value.trim();
+    const startDateValue = startDate.value.trim();
+    const endDateValue = endDate.value.trim();
     checkEmpty(summaryValue, summary, blank);
 };
 
