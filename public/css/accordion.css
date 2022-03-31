@@ -9,3 +9,16 @@
     outline: none;
     transition: 0.4s;
 }
+
+.change,
+.accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
