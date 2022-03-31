@@ -19,9 +19,9 @@ const schoolName = document.querySelector("#school_name");
 const degree = document.querySelector("#degree");
 const descriptionSchool = document.querySelector("#description_school");
 const startDate = document.querySelectorAll("#start_end_date_school")[0];
-const endDate = document.querySelectorAll("#start_end_date_school")[0];
-
-// TODO check email
+const endDate = document.querySelectorAll("#start_end_date_school")[1];
+// Skill
+const descriptionSkill = document.querySelector("#description_skill");
 
 buttonField1.addEventListener("click", (e) => {
     e.preventDefault();
@@ -36,6 +36,11 @@ buttonField2.addEventListener("click", (e) => {
 buttonField3.addEventListener("click", (e) => {
     e.preventDefault();
     checkValidator3();
+});
+
+buttonField4.addEventListener("click", (e) => {
+    e.preventDefault();
+    checkValidator4();
 });
 
 const blank = "Cannot be blank";
@@ -70,6 +75,11 @@ const checkValidator3 = function () {
     checkEmpty(descriptionSchoolValue, descriptionSchool, blank);
     checkEmpty(startDateValue, startDate);
     checkEmpty(endDateValue, endDate, blank);
+};
+
+const checkValidator4 = function () {
+    const descriptionSkillValue = trimValue(descriptionSkill);
+    checkEmpty(descriptionSkillValue, descriptionSkill, blank);
 };
 
 const checkEmpty = (value, inputValue, message) =>
