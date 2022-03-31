@@ -249,6 +249,7 @@ textarea {
     height: 59px;
     font-size: 16px;
     max-height: 330px;
+    padding: 25px;
 }
 
 textarea::-webkit-scrollbar {
