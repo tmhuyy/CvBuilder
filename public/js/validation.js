@@ -42,11 +42,11 @@ const blank = "Cannot be blank";
 const invalid = "Invalid email";
 
 const checkValidator1 = function () {
-    const firstNameValue = firstName.value.trim();
-    const lastNameValue = lastName.value.trim();
-    const addressValue = address.value.trim();
-    const phoneNumberValue = phoneNumber.value.trim();
-    const emailValue = email.value.trim();
+    const firstNameValue = trimValue(firstName);
+    const lastNameValue = trimValue(lastName);
+    const addressValue = trimValue(address);
+    const phoneNumberValue = trimValue(phoneNumber);
+    const emailValue = trimValue(email);
     checkEmpty(firstNameValue, firstName, blank);
     checkEmpty(lastNameValue, lastName, blank);
     checkEmpty(addressValue, address, blank);
@@ -55,7 +55,7 @@ const checkValidator1 = function () {
 };
 
 const checkValidator2 = function () {
-    const summaryValue = summary.value.trim();
+    const summaryValue = trimValue(summary);
     checkEmpty(summaryValue, summary, blank);
 };
 
@@ -65,7 +65,6 @@ const checkValidator3 = function () {
     const descriptionSchoolValue = descriptionSchool.value.trim();
     const startDateValue = startDate.value.trim();
     const endDateValue = endDate.value.trim();
-    checkEmpty(summaryValue, summary, blank);
 };
 
 const checkEmpty = (value, inputValue, message) =>
