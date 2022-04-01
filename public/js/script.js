@@ -4,9 +4,9 @@ const formSteps = [...multiStepForm.querySelectorAll("[data-step]")];
 const progress = document.getElementById("progress");
 const progressSteps = document.querySelectorAll(".progress-step");
 
-let currentStep = formSteps.findIndex((step) => {
-    return step.classList.contains("active");
-});
+let currentStep = formSteps.findIndex((step) =>
+    step.classList.contains("active")
+);
 
 if (currentStep < 0) {
     currentStep = 0;
@@ -42,13 +42,13 @@ formSteps.forEach((step) => {
     });
 });
 
-function showCurrentStep() {
+const showCurrentStep = function () {
     formSteps.forEach((step, index) => {
         step.classList.toggle("active", index === currentStep);
     });
-}
+};
 
-function updateProgressbar() {
+const updateProgressbar = function () {
     progressSteps.forEach((progressStep, idx) => {
         if (idx < currentStep + 1) {
             progressStep.classList.add("progress-step-active");
@@ -61,4 +61,4 @@ function updateProgressbar() {
 
     progress.style.width =
         ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + "%";
-}
+};
